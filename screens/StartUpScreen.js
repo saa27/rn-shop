@@ -8,10 +8,10 @@ import {
 import { useDispatch } from "react-redux";
 
 import Colors from "../constants/Colors";
-import * as authActions from '../store/actions/authAction';
+import * as authActions from "../store/actions/authAction";
 
 const StartUpScreen = (props) => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   useEffect(() => {
     const tryLogin = async () => {
       const userData = await AsyncStorage.getItem("userData"); //gets a promise with AsyncStorage
@@ -27,9 +27,13 @@ const StartUpScreen = (props) => {
         props.navigation.navigate("Auth");
         return;
       }
+
+      const expirationTime = expirationDate.getTime() - new Date().getTime();
+
       props.navigation.navigate("Shop");
-      dispatch(authActions.authenticate(userId, token)); // got from AsyncStorage
+      dispatch(authActions.authenticate(userId, token, expirationTime)); // got from AsyncStorage
     };
+
     tryLogin();
   }, [dispatch]);
 
