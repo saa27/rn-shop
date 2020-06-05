@@ -1,11 +1,10 @@
 {
   "expo": {
-    "name": "shop",
-    "slug": "shop",
+    "name": "XChange",
+    "slug": "xchange",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
