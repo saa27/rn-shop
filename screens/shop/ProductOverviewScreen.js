@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
   },
 });
 
-ProductOverviewScreen.navigationOptions = (navData) => {
+export const screenOptions = (navData) => {
   return {
     headerTitle: "All Products",
     headerLeft: () => (

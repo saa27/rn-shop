@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   },
 });
 
-CartScreen.navigationOptions = (navData) => {
+export const screenOptions = (navData) => {
   return {
     headerTitle: "Cart",
   };
