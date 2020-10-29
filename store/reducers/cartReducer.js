@@ -12,7 +12,7 @@ export default (state = initialState, action) => {
     switch (action.type) {
         case ADD_TO_CART:
             const addedProduct = action.product;
-            const prodTitle = addedProduct.title;
+            const prodTitle = addedProduct.title;//just checking gitmoji
             const prodPrice = addedProduct.price;
 
             let updatedOrNewCartItem ;
